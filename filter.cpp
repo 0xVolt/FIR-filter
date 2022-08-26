@@ -1,12 +1,4 @@
 /*
-* File Name		: filter.c
-* Authors		: Trung Kien - LeTrungKien.K53.hut@gmail.com
-* Version		: V 1.0
-* Date			: 10 July 2015
-* Description	: Implement FIR filter using Circular Buffer increase performance
-*/
-
-/*
 * NOTE: use this command to build: 
 * gcc -o filters filters.c -lm -lfftw3
 */
