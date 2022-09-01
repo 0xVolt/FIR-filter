@@ -1,5 +1,5 @@
 /*
-* NOTE: use this command to build: 
+* NOTE: use this command to build:
 * gcc -o filters filters.c -lm -lfftw3
 */
 
@@ -60,7 +60,7 @@ double *create1TransSinc(int windowLength, double transFreq, double sampFreq, en
 	{
 		fprintf(stderr, "create1TransSinc: The windowLength can not is odd");
 		return NULL;
-	}	
+	}
 
 	// Allocate memory to store coefficient.
 	int arraySize = (windowLength + 1) / 2;
@@ -77,7 +77,7 @@ double *create1TransSinc(int windowLength, double transFreq, double sampFreq, en
 		fprintf(stderr, "create1TransSinc: The type must be LOW_PASS or HIGH_PASS");
 		return NULL;
 	}
-	
+
 	// Caculate coefficent of filter
 	int k;
 	double val = 2.0 * (double)transFreq / (double)sampFreq;
@@ -105,7 +105,7 @@ double *createWindow(double *in, double *out, int windowLength, enum windowType 
 	{
 		fprintf(stderr, "create1TransSinc: The windowLength can not is odd");
 		return NULL;
-	}	
+	}
 
 	// Allocate memory to store window.
 	int arraySize = (windowLength + 1) / 2;
@@ -191,7 +191,7 @@ void calulateKaiserParam(int* M, double* beta, double ripple, double transWidth,
 	if(A <= 21)
 	{
 		*M = ceil(5.79 / tw);
-		*beta = 0; 
+		*beta = 0;
 	}
 	if(A > 21 && A <= 50)
 	{
@@ -246,7 +246,7 @@ double *createKaiserWindow(double *in, double *out, int windowLength, double bet
 	{
 		out[k] = modZeroBessel(beta * sqrt(1 - (4 * k *k)/ (M * M))) / modZeroBessel(beta);
 	}
-	
+
 	if(in != NULL)
 	{
 		for(k = 0; k < arraySize; k++)
@@ -267,7 +267,7 @@ double fir_filter(double rawData, double *firCoef, int currentIndex, double* cir
 	double dataFilted = 0.0f;
 	int M = (windowLength -1)/2;
 
-	dataFilted += firCoef[0] * circularBuff[(currentIndex - M + 1) & BUFFER_SIZE]; // (currentIndex + M)&BUFF_SIZE la phan tu trung tam 
+	dataFilted += firCoef[0] * circularBuff[(currentIndex - M + 1) & BUFFER_SIZE]; // (currentIndex + M)&BUFF_SIZE la phan tu trung tam
 	int k;
 	for(k = 1; k <= M; k++)
 	{
@@ -283,7 +283,7 @@ int main()
 	double sampFreq = 8000.0;
 	double transFreq = 100.0;
 	int windowLength = 21;
-	
+
 	/* Kaiser Param*/
 	double ripple = 0.01;
 	double transWidth = 100.0;
