@@ -6,11 +6,11 @@
   - [1.3. Key](#13-key)
     - [1.3.1. Signals](#131-signals)
     - [1.3.2. Signal Processing](#132-signal-processing)
-    - [Domains of a Signal](#domains-of-a-signal)
     - [1.3.3. Analog and Digital Signals](#133-analog-and-digital-signals)
       - [Analog Signals](#analog-signals)
       - [Digital Signals](#digital-signals)
       - [What's the difference?](#whats-the-difference)
+    - [Domains of a Signal](#domains-of-a-signal)
 
 ## 1.1. About this repository
 This minor project in Digital Signal Processing (DSP) is to implement a Finite Impulse Response (FIR) filtering application of continuous data in C++ using the concept of a circular buffer. 
@@ -32,13 +32,6 @@ The reduction of noise is covered in part under the heading of signal integrity.
 
 ### 1.3.2. Signal Processing
 Signal processing is an electrical engineering subfield that focuses on analysing, modifying, and synthesizing signals such as sound, images, and scientific measurements. Signal processing techniques can be used to improve transmission, storage efficiency and subjective quality and to also emphasize or detect components of interest in a measured signal.
-
-### Domains of a Signal
-There are two domains of a signal, a time domain and a frequency domain. 
-
-Refer to this [article](https://learnemc.com/time-frequency-domain) for a more comprehensive look on what the different domains are and how their conversions are made simple by fourier transforms.
-
-The following visuals are the key to understanding the difference between 
 
 ### 1.3.3. Analog and Digital Signals
 #### Analog Signals
@@ -63,3 +56,10 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 1. At a glance, here's what an analog signal would look like compared to a digital signal. ![](assets/analog-vs-digital-signal.jpg)
 2. Here's how you would go about converting an analog signal (in continuous-time form) to a digital signal (after quantisation of a discrete-time signal.) ![](assets/continuous-to-discrete-time-to-digital.png)
 3. Here's another example of how an analog signal is converted to a digital signal. This one explains how sampling and quantisation can be done in any order to achieve the same digital signal for a single analog signal. ![](assets/continuous-to-discrete-time-to-digital-2.png)
+
+### Domains of a Signal
+There are two domains of a signal, a time domain and a frequency domain. 
+
+Refer to this [article](https://learnemc.com/time-frequency-domain) for a more comprehensive look on what the different domains are and how their conversions are made simple by fourier transforms.
+
+The following visuals are the key to understanding the difference between the two domains of signals ![](assets/time-vs-frequency-1.png) ![](assets/time-vs-frequency-4.png) ![](assets/time-vs-frequency-5.png) ![](assets/time-vs-frequency-6.png) ![](assets/time-vs-frequency-3.png) ![](assets/time-vs-frequency-2.png) 
