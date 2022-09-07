@@ -98,3 +98,4 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 ## Resources
 1. [Tutorial to learn about implementing FIR filters in C++.](https://www.wasyresearch.com/tutorial-c-c-implementation-of-circular-buffer-for-fir-filter-and-gnu-plotting-on-linux/)
 2. [Amazing Quora article.](https://www.quora.com/Where-do-we-use-fir-filters)
+3. [Differences between domains of a signal.](https://learnemc.com/time-frequency-domain)
