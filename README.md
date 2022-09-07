@@ -14,16 +14,15 @@
       - [1.5.4.1. Digital Signals](#1541-digital-signals)
       - [1.5.4.2. Analog Signals](#1542-analog-signals)
       - [1.5.4.3. What's the difference?](#1543-whats-the-difference)
+  - [Resources](#resources)
 
 ## 1.2. Objectives
 - [ ] Input and analyse signals
 - [ ] Implement an FIR (low band-pass) filter on the signal
 - [ ] Plot both original and processed signals using gnuplot
-- [ ] Implement a Kalman filter
-- [ ] Process the previous signal using the Kalman filter
-- [ ] Plot the results of the Kalman filter
-- [ ] Compare the Kalman and the FIR filters
-- [ ] *(potentially) Perform analysis on brain waves*
+- [ ] Implement for different data structures
+- [ ] Analyse the complexities and study differences
+- [ ] Write report and presentation on the affect of different DSs
 
 ## 1.3. About this repository
 This minor project in Digital Signal Processing (DSP) is to implement a Finite Impulse Response (FIR) filtering application of continuous data in C++ using the concept of a circular buffer.
@@ -89,3 +88,5 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 1. At a glance, here's what an analog signal would look like compared to a digital signal. ![](assets/analog-vs-digital-signal.jpg)
 2. Here's how you would go about converting an analog signal (in continuous-time form) to a digital signal (after quantisation of a discrete-time signal.) ![](assets/continuous-to-discrete-time-to-digital.png)
 3. Here's another example of how an analog signal is converted to a digital signal. This one explains how sampling and quantisation can be done in any order to achieve the same digital signal for a single analog signal. ![](assets/continuous-to-discrete-time-to-digital-2.png)
+
+## Resources
