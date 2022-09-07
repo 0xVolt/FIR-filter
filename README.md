@@ -110,3 +110,5 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 3. [Differences between domains of a signal.](https://learnemc.com/time-frequency-domain)
 4. [Research paper on *Framework for the Classification of Emotions in People With Visual Disabilities Through Brain Signals*.](https://www.frontiersin.org/articles/10.3389/fninf.2021.642766/full)
 5. [Machine Learning, Neural Networks and Signal Processing - Medium article.](https://towardsdatascience.com/machine-learning-and-signal-processing-103281d27c4b)
+
+[Back to the top!](#1-constructing-an-fir-filter-in-c-and-gnuplot)
