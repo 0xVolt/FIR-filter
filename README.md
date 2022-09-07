@@ -20,9 +20,15 @@
 - [ ] Input and analyse signals
 - [ ] Implement an FIR (low band-pass) filter on the signal
 - [ ] Plot both original and processed signals using gnuplot
+- [ ] Proof of concept with real data
+  - [ ] Use `.mp3` files as input to the program
+  - [ ] Visualise the cleaning of the signal
 - [ ] Implement for different data structures
 - [ ] Analyse the complexities and study differences
+  - [ ] See if the DS has any correlation to the type of signal inputted
 - [ ] Write report and presentation on the affect of different DSs
+- [ ] Outcome of the minor project is the best DS to implement in the use case of digital signals
+- [ ] Segue to the research paper
 
 ## 1.3. About this repository
 This minor project in Digital Signal Processing (DSP) is to implement a Finite Impulse Response (FIR) filtering application of continuous data in C++ using the concept of a circular buffer.
@@ -90,3 +96,5 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 3. Here's another example of how an analog signal is converted to a digital signal. This one explains how sampling and quantisation can be done in any order to achieve the same digital signal for a single analog signal. ![](assets/continuous-to-discrete-time-to-digital-2.png)
 
 ## Resources
+1. [Tutorial to learn about implementing FIR filters in C++.](https://www.wasyresearch.com/tutorial-c-c-implementation-of-circular-buffer-for-fir-filter-and-gnu-plotting-on-linux/)
+2. 
