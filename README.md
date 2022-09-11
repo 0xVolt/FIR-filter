@@ -106,9 +106,11 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 
 ## Resources
 1. [Tutorial to learn about implementing FIR filters in C++.](https://www.wasyresearch.com/tutorial-c-c-implementation-of-circular-buffer-for-fir-filter-and-gnu-plotting-on-linux/)
-2. [Amazing Quora article.](https://www.quora.com/Where-do-we-use-fir-filters)
-3. [Differences between domains of a signal.](https://learnemc.com/time-frequency-domain)
-4. [Research paper on *Framework for the Classification of Emotions in People With Visual Disabilities Through Brain Signals*.](https://www.frontiersin.org/articles/10.3389/fninf.2021.642766/full)
-5. [Machine Learning, Neural Networks and Signal Processing - Medium article.](https://towardsdatascience.com/machine-learning-and-signal-processing-103281d27c4b)
+2. [Types of FIR filters]()
+3. [Amazing Quora article.](https://www.quora.com/Where-do-we-use-fir-filters)
+4. [Differences between domains of a signal.](https://learnemc.com/time-frequency-domain)
+5. [Research paper on *Framework for the Classification of Emotions in People With Visual Disabilities Through Brain Signals*.](https://www.frontiersin.org/articles/10.3389/fninf.2021.642766/full)
+6. [Machine Learning, Neural Networks and Signal Processing - Medium article.](https://towardsdatascience.com/machine-learning-and-signal-processing-103281d27c4b)
+7. [Chebyshev](https://github.com/vinniefalco/DSPFiltersDemo/blob/master/DSPFilters/modules/dsp_filters/filters/Documentation.cpp)
 
 [Back to the top!](#1-constructing-an-fir-filter-in-c-and-gnuplot)
