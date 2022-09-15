@@ -112,5 +112,7 @@ Here are a couple of visuals to help better distinguish between the two kinds of
 5. [Research paper on *Framework for the Classification of Emotions in People With Visual Disabilities Through Brain Signals*.](https://www.frontiersin.org/articles/10.3389/fninf.2021.642766/full)
 6. [Machine Learning, Neural Networks and Signal Processing - Medium article.](https://towardsdatascience.com/machine-learning-and-signal-processing-103281d27c4b)
 7. [Chebyshev](https://github.com/vinniefalco/DSPFiltersDemo/blob/master/DSPFilters/modules/dsp_filters/filters/Documentation.cpp)
+8. [C++ Algorithms for DSP - Google Books](https://books.google.co.in/books?hl=en&lr=&id=5mgp2OabD6QC&oi=fnd&pg=PT1&dq=FIR+filters+AND+C%2B%2B&ots=Q6inZtkK7D&sig=IYv6VBwlSQcvL40LkCAU7qcJOKk&redir_esc=y#v=onepage&q=FIR%20filters%20AND%20C%2B%2B&f=false)
+9. [High Performance Digital Filters - Springer Link](https://link.springer.com/chapter/10.1007/978-3-662-47810-3_14)
 
 [Back to the top!](#1-constructing-an-fir-filter-in-c-and-gnuplot)
