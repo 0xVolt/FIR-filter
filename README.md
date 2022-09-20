@@ -27,14 +27,14 @@
 - [ ] Implement for different data structures
 - [ ] Analyse the complexities and study differences
   - [ ] See if the DS has any correlation to the type of signal inputted
-- [ ] Write report and presentation on the affect of different DSs
+- [ ] Write report and presentation on the effect of different DSs
 - [ ] Outcome of the minor project is the best DS to implement in the use case of digital signals
 - [ ] Segue to the research paper
 
 ## Research Objectives
 - [ ] Document study on brain waves and their characteristics
 - [ ] Generate our own brain waves using machine learning/Find dataset on brain waves
-- [ ] Data preprocessing and data cleaning
+- [ ] Data pre-processing and data cleaning
   - [ ] Filtering - Conclusion from the minor project
 - [ ] Feature extraction
 - [ ] Machine Learning - Classification of brain signals into moods/emotions
