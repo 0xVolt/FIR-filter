@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(filter)
+
+set( CMAKE_CXX_COMPILER "C:\\MinGW\\bin\\g++.exe" )
+set( CMAKE_C_COMPILER "C:\\MinGW\\bin\\gcc.exe" )
+
+project(build)
 
 find_program(GNUPLOT gnuplot)
 if(NOT GNUPLOT)
