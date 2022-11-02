@@ -1,14 +1,20 @@
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 #include "FIR.h" //including the FIR filter functions
 
+using namespace std;
+
 int main(int argv, char *argc[])
 {
+    // cout << "Start of main function\n";
+    int n;
+    cout << "Enter the number of points to generate in the signal: ";
+    cin >> n;
 
     //////////////////// Generating noisy data to be filtered //////////////////////////////////////
-    int n = 1000;
     float input[n];
     float filteredInput[n];
 
@@ -24,7 +30,6 @@ int main(int argv, char *argc[])
     }
 
     //////////////////////// FIR filter with circular buffer//////////////////////////////////////
-
     // Declaring the filter struct variable
     FIRFilter fir;
 
@@ -38,8 +43,20 @@ int main(int argv, char *argc[])
         filteredInput[i] = fir.out;
     }
 
-    /////////////////////// GNU plotting//////////////////////////////////////////////////////////
+    cout << "\n\nDisplaying the generated noisy input:\n";
+    for (int i = 0; i < n; i++) {
+        cout << input[i] << " ";
+    }
 
+    cout << "\n\nDisplaying the filtered output:\n";
+    for (int i = 0; i < n; i++) {
+        cout << filteredInput[i] << " ";
+    }
+
+    // Display a new line for better formatting
+    cout << endl;
+
+    /////////////////////// GNU plotting//////////////////////////////////////////////////////////
     // Plotting with GNU Plot
     FILE *gnuplot;
     char gnuPlotCommandString[500] = "";
@@ -65,7 +82,7 @@ int main(int argv, char *argc[])
         {
             break;
         }
-        if (tempc) // do nothing. supressing the compiler warning for unused compiler
+        if (tempc) // do nothing. suppressing the compiler warning for unused compiler
             fclose(gnuplot);
     }
     if (termNo == 4)
@@ -111,4 +128,6 @@ int main(int argv, char *argc[])
     // Close the GNU plot piping
     fflush(gnuplot);
     fclose(gnuplot);
+
+    // cout << "End of main function\n\n";
 }
