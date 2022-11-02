@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/volt/Code/digital-signal-processing-minor-project/project/src/FIR.cpp
+FIR.h
+/home/volt/Code/digital-signal-processing-minor-project/project/src/FIR.h
+
+/home/volt/Code/digital-signal-processing-minor-project/project/src/main.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+FIR.h
+/home/volt/Code/digital-signal-processing-minor-project/project/src/FIR.h
+
+inc/FIR.h
+stdint.h
+-
+

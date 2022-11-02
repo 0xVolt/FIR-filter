@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(filter)
+project(main)
 
 find_program(GNUPLOT gnuplot)
 if(NOT GNUPLOT)

@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named filter
+# Target rules for targets named main
 
 # Build rule for target.
-filter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 filter
-.PHONY : filter
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-filter/fast:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/build
-.PHONY : filter/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 src/FIR.o: src/FIR.cpp.o
 
@@ -129,7 +129,7 @@ src/FIR.o: src/FIR.cpp.o
 
 # target to build an object file
 src/FIR.cpp.o:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/FIR.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FIR.cpp.o
 .PHONY : src/FIR.cpp.o
 
 src/FIR.i: src/FIR.cpp.i
@@ -138,7 +138,7 @@ src/FIR.i: src/FIR.cpp.i
 
 # target to preprocess a source file
 src/FIR.cpp.i:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/FIR.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FIR.cpp.i
 .PHONY : src/FIR.cpp.i
 
 src/FIR.s: src/FIR.cpp.s
@@ -147,7 +147,7 @@ src/FIR.s: src/FIR.cpp.s
 
 # target to generate assembly for a file
 src/FIR.cpp.s:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/FIR.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/FIR.cpp.s
 .PHONY : src/FIR.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -156,7 +156,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -165,7 +165,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +174,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/filter.dir/build.make CMakeFiles/filter.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... filter"
+	@echo "... main"
 	@echo "... src/FIR.o"
 	@echo "... src/FIR.i"
 	@echo "... src/FIR.s"
