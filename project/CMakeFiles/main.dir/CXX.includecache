@@ -6,11 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/volt/Code/digital-signal-processing-minor-project/project/src/FIR.cpp
-FIR.h
-/home/volt/Code/digital-signal-processing-minor-project/project/src/FIR.h
-
 /home/volt/Code/digital-signal-processing-minor-project/project/src/main.cpp
+fstream
+-
 iostream
 -
 stdio.h

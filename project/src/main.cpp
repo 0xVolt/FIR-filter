@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,76 +59,36 @@ int main(int argv, char *argc[])
 
     /////////////////////// GNU plotting//////////////////////////////////////////////////////////
     // Plotting with GNU Plot
-    FILE *gnuplot;
+    FILE *gnuplot = fopen("commands.p", "w");
+    FILE *gnuplotData = fopen("data.csv", "w");
     char gnuPlotCommandString[500] = "";
     char title[200] = "";
     char xLabel[200] = "";
     char yLabel[200] = "";
 
-    // Select and Set the gnulot term for setting the terminal or plot size
-    const int NUM_TERMS = 5; // from 0 to 4
-
-    // #define NUM_TERMS=5; //from 0 to 4
-    char gnuplotTerms[NUM_TERMS][50] = {"wxt", "x11", "qt", "fail"};
-
-    // select and get the term type, otherwise fail and out
-    int termNo = 0;
-    for (termNo = 0; termNo < NUM_TERMS; termNo++)
-    {
-        sprintf(gnuPlotCommandString, "gnuplot -e \"set term %s\" 2>1", gnuplotTerms[termNo]);
-        gnuplot = popen(gnuPlotCommandString, "r");
-        char tempc;
-        tempc = fgetc(gnuplot);
-        if (feof(gnuplot))
-        {
-            break;
-        }
-        if (tempc) // do nothing. suppressing the compiler warning for unused compiler
-            fclose(gnuplot);
-    }
-    if (termNo == 4)
-    { // The term option is not available
-        char strError[100];
-        sprintf(strError, "Cannot find a suitable terminal type for GnuPlot, please ensure gnuplot-x11 is installed");
-        printf("[ERROR]: %s\n", strError);
-        exit(-1);
-    }
-
-    // Open the gnuplot for writing/plotting
-    sprintf(gnuPlotCommandString, "gnuplot -persistent 2> /dev/null");
-    if ((gnuplot = popen(gnuPlotCommandString, "w")) == NULL)
-    {
-        char strError[100];
-        sprintf(strError, "Failed to open gnuplot executable");
-        printf("[ERROR]: %s\n", strError);
-        exit(-1);
-    }
-
     // Set the plot title, xlabel and ylabel
-    sprintf(title, "Originial and filtered samples");
+    sprintf(title, "Original and filtered samples");
     sprintf(xLabel, "Time");
     sprintf(yLabel, "Amplitude");
 
-    fprintf(gnuplot, "set terminal %s size 500,400\n", gnuplotTerms[termNo]);
+    fprintf(gnuplot, "plot \'data.dat\' title \'Data\'\n");
+    fprintf(gnuplot, "set terminal wxt size 500, 400\n");
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
     fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
 
-    // Plot the data
-    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\" ");
-    for (int i = 0; i < n; i++)
-    {
-        fprintf(gnuplot, "%d %lf\n", i, input[i]);
-    }
-    fprintf(gnuplot, "e\n");
-    for (int i = 0; i < n; i++)
-    {
-        fprintf(gnuplot, "%d %lf\n", i, filteredInput[i]);
-    }
+    // // Plot the data
+    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
 
+    fprintf(gnuplotData, "Raw Input, Filtered Output\n");
+    for (int i = 0; i < n; i++)
+    {
+        fprintf(gnuplotData, "%lf, %lf\n", input[i], filteredInput[i]);
+    }
+    
     // Close the GNU plot piping
-    fflush(gnuplot);
     fclose(gnuplot);
-
+    fclose(gnuplotData);
+    
     // cout << "End of main function\n\n";
 }
