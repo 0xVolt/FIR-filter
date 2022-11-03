@@ -15,7 +15,7 @@ int main(int argv, char *argc[])
     cout << "Enter the number of points to generate in the signal: ";
     cin >> n;
 
-    //////////////////// Generating noisy data to be filtered //////////////////////////////////////
+    // Generating noisy data to be filtered
     float input[n];
     float filteredInput[n];
 
@@ -30,7 +30,7 @@ int main(int argv, char *argc[])
         input[i] = (float)sin(2 * pi * f * i / n) + noise; // one cycle t=i/n=0 to 1
     }
 
-    //////////////////////// FIR filter with circular buffer//////////////////////////////////////
+    // FIR filter with circular buffer
     // Declaring the filter struct variable
     FIRFilter fir;
 
@@ -57,7 +57,6 @@ int main(int argv, char *argc[])
     // Display a new line for better formatting
     cout << endl;
 
-    /////////////////////// GNU plotting//////////////////////////////////////////////////////////
     // Plotting with GNU Plot
     FILE *gnuplot = fopen("commands.p", "w");
     FILE *gnuplotData = fopen("data.csv", "w");
