@@ -1,5 +1,7 @@
 # Constructing an FIR Filter in C++ and Gnuplot
 
+#### Note: The code for the project is located in `./project`.
+
 ## Table of Contents
 - [Constructing an FIR Filter in C++ and Gnuplot](#constructing-an-fir-filter-in-c-and-gnuplot)
   - [Table of Contents](#table-of-contents)
