@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/deshi/Code/FIR-filter/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\src\\FIR.cpp.obj -c C:\\Users\\deshi\\Code\\FIR-filter\\minor-project-build\\src\\FIR.cpp",
+  "file": "C:/Users/deshi/Code/FIR-filter/minor-project-build/src/FIR.cpp"
+},
+{
+  "directory": "C:/Users/deshi/Code/FIR-filter/build",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\deshi\\Code\\FIR-filter\\minor-project-build\\src\\main.cpp",
+  "file": "C:/Users/deshi/Code/FIR-filter/minor-project-build/src/main.cpp"
+}
+]
