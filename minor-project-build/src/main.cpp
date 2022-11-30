@@ -11,7 +11,7 @@ using namespace std;
 int main(int argv, char *argc[])
 {
     // cout << "Start of main function\n";
-    int n;
+    unsigned long long n;
     cout << "Enter the number of points to generate in the signal: ";
     cin >> n;
 
@@ -28,6 +28,7 @@ int main(int argv, char *argc[])
         float max = 0.3f;
         float noise = min + ((float)rand() / (float)RAND_MAX) * (max - min);
         input[i] = (float)sin(2 * pi * f * i / n) + noise; // one cycle t=i/n=0 to 1
+        cout << input[i] << " ";
     }
 
     // FIR filter with circular buffer
@@ -42,17 +43,18 @@ int main(int argv, char *argc[])
     {
         FIRFilter_calc(&fir, input[i]);
         filteredInput[i] = fir.out;
-    }
-
-    cout << "\n\nDisplaying the generated noisy input:\n";
-    for (int i = 0; i < n; i++) {
-        cout << input[i] << " ";
-    }
-
-    cout << "\n\nDisplaying the filtered output:\n";
-    for (int i = 0; i < n; i++) {
         cout << filteredInput[i] << " ";
     }
+
+    // cout << "\n\nDisplaying the generated noisy input:\n";
+    // for (int i = 0; i < n; i++) {
+    //     cout << input[i] << " ";
+    // }
+
+    // cout << "\n\nDisplaying the filtered output:\n";
+    // for (int i = 0; i < n; i++) {
+    //     cout << filteredInput[i] << " ";
+    // }
 
     // Display a new line for better formatting
     cout << endl;
@@ -90,4 +92,5 @@ int main(int argv, char *argc[])
     fclose(gnuplotData);
     
     // cout << "End of main function\n\n";
+    return 0;
 }
