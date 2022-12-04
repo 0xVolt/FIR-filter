@@ -269,9 +269,7 @@ CMakeFiles/project.dir/main.cpp.obj: C:/Users/deshi/Code/dsp-filter-minor-projec
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unordered_map.h \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/unordered_set \
   C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unordered_set.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/shared_mutex \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/stdlib.h \
-  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h
+  C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/shared_mutex
 
 CMakeFiles/project.dir/source/FIR.cpp.obj: C:/Users/deshi/Code/dsp-filter-minor-project-cpp/source/FIR.cpp \
   C:/Users/deshi/Code/dsp-filter-minor-project-cpp/include/FIR.h \
@@ -718,8 +716,6 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_defines.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h:
 
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/math.h:
-
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/locale_classes.h:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/move.h:
@@ -1059,7 +1055,5 @@ C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unordered_map.h:
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/unordered_set:
 
 C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/shared_mutex:
-
-C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/stdlib.h:
 
 C:/Users/deshi/Code/dsp-filter-minor-project-cpp/source/FIR.cpp:

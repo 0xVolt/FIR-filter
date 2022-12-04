@@ -254,6 +254,4 @@ CMakeFiles/project.dir/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unordered_map.h \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\unordered_set \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unordered_set.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\shared_mutex \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdlib.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\math.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\shared_mutex
