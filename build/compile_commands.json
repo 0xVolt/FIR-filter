@@ -1,7 +1,0 @@
-[
-{
-  "directory": "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build",
-  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/execute.dir/includes_CXX.rsp -g -o CMakeFiles\\execute.dir\\main.cpp.obj -c C:\\Users\\deshi\\Code\\dsp-filter-minor-project-cpp\\main.cpp",
-  "file": "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/main.cpp"
-}
-]

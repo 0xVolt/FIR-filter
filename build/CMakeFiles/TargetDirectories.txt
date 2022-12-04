@@ -1,3 +1,0 @@
-C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build/CMakeFiles/execute.dir
-C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build/CMakeFiles/edit_cache.dir
-C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build/CMakeFiles/rebuild_cache.dir
