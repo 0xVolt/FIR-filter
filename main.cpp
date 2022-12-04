@@ -1,4 +1,4 @@
-#include "include/FIR.h" //including the FIR filter functions
+#include "include/FIR.h"    //including the FIR filter functions
 #include "include/Common.h" //including the FIR filter functions
 
 #include <iostream>
@@ -8,7 +8,6 @@ using namespace std;
 int main(int argv, char *argc[])
 {
 
-    //////////////////// Generating noisy data to be filtered //////////////////////////////////////
     int n = 1000;
     float input[n];
     float filteredInput[n];
@@ -24,8 +23,6 @@ int main(int argv, char *argc[])
         input[i] = (float)sin(2 * pi * f * i / n) + noise; // one cycle t=i/n=0 to 1
     }
 
-    //////////////////////// FIR filter with circular buffer//////////////////////////////////////
-
     // Declaring the filter struct variable
     FIRFilter fir;
 
@@ -39,8 +36,6 @@ int main(int argv, char *argc[])
         filteredInput[i] = fir.out;
     }
 
-    /////////////////////// GNU plotting//////////////////////////////////////////////////////////
-
     // Plotting with GNU Plot
     FILE *gnuplot;
     char gnuPlotCommandString[500] = "";
@@ -48,7 +43,7 @@ int main(int argv, char *argc[])
     char xLabel[200] = "";
     char yLabel[200] = "";
 
-    // Select and Set the gnulot term for setting the terminal or plot size
+    // Select and Set the gnuplot term for setting the terminal or plot size
     const int NUM_TERMS = 5; // from 0 to 4
 
     // #define NUM_TERMS=5; //from 0 to 4
@@ -66,7 +61,8 @@ int main(int argv, char *argc[])
         {
             break;
         }
-        if (tempc) // do nothing. supressing the compiler warning for unused compiler
+        // Do nothing. Suppressing the compiler warning for unused compiler.
+        if (tempc)
             fclose(gnuplot);
     }
     if (termNo == 4)
@@ -88,7 +84,7 @@ int main(int argv, char *argc[])
     }
 
     // Set the plot title, xlabel and ylabel
-    sprintf(title, "Originial and filtered samples");
+    sprintf(title, "Original and filtered samples");
     sprintf(xLabel, "Time");
     sprintf(yLabel, "Amplitude");
 
