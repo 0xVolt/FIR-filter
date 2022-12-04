@@ -5,9 +5,7 @@ using namespace std;
 int main(int argv, char *argc[])
 {
     // cout << "Start of main function\n";
-    int n = 1000;
-    // cout << "Enter the number of points to generate in the signal: ";
-    // cin >> n;
+    int n = 10;
 
     // Generating noisy data to be filtered
     float input[n];
@@ -38,23 +36,12 @@ int main(int argv, char *argc[])
         filteredInput[i] = fir.out;
     }
 
-    // cout << "\n\nDisplaying the generated noisy input:\n";
-    // for (int i = 0; i < n; i++) {
-    //     cout << input[i] << " ";
-    // }
-
-    // cout << "\n\nDisplaying the filtered output:\n";
-    // for (int i = 0; i < n; i++) {
-    //     cout << filteredInput[i] << " ";
-    // }
-
     // Display a new line for better formatting
     cout << endl;
 
     // Plotting with GNU Plot
     FILE *gnuplot = fopen("commands.p", "w");
-    // FILE *gnuplotData = fopen("data.tmp", "w");
-    char gnuPlotCommandString[500] = "";
+
     char title[200] = "";
     char xLabel[200] = "";
     char yLabel[200] = "";
@@ -83,27 +70,12 @@ int main(int argv, char *argc[])
     }
     fprintf(gnuplot, "e\n");
     fprintf(gnuplot, "replot\n");
-    
-    // for (int i = 0; i < n; i++)
-    // {
-    //     fprintf(gnuplotData, "%lf, %lf\n", input[i], filteredInput[i]);
-    // }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     fprintf(gnuplotData, "%d %lf\n", i, input[i]);
-    // }
-    // fprintf(gnuplotData, "e\n");
-    // for (int i = 0; i < n; i++)
-    // {
-    //     fprintf(gnuplotData, "%d %lf\n", i, filteredInput[i]);
-    // }
-    // fprintf(gnuplotData, "e\n");
 
     // Close the GNU plot piping
     fclose(gnuplot);
-    // fclose(gnuplotData);
+
     
+
     // cout << "End of main function\n\n";
     return 0;
 }

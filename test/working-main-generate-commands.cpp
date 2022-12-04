@@ -1,16 +1,13 @@
 #include "include/FIR.h"
-#include "include/Common.h"
-
-#include <iostream>
 
 using namespace std;
 
 int main(int argv, char *argc[])
 {
     // cout << "Start of main function\n";
-    int n;
-    cout << "Enter the number of points to generate in the signal: ";
-    cin >> n;
+    int n = 1000;
+    // cout << "Enter the number of points to generate in the signal: ";
+    // cin >> n;
 
     // Generating noisy data to be filtered
     float input[n];
@@ -25,7 +22,6 @@ int main(int argv, char *argc[])
         float max = 0.3f;
         float noise = min + ((float)rand() / (float)RAND_MAX) * (max - min);
         input[i] = (float)sin(2 * pi * f * i / n) + noise; // one cycle t=i/n=0 to 1
-        cout << input[i] << " ";
     }
 
     // FIR filter with circular buffer
@@ -40,7 +36,6 @@ int main(int argv, char *argc[])
     {
         FIRFilter_calc(&fir, input[i]);
         filteredInput[i] = fir.out;
-        cout << filteredInput[i] << " ";
     }
 
     // cout << "\n\nDisplaying the generated noisy input:\n";
@@ -58,7 +53,7 @@ int main(int argv, char *argc[])
 
     // Plotting with GNU Plot
     FILE *gnuplot = fopen("commands.p", "w");
-    FILE *gnuplotData = fopen("data.csv", "w");
+    // FILE *gnuplotData = fopen("data.tmp", "w");
     char gnuPlotCommandString[500] = "";
     char title[200] = "";
     char xLabel[200] = "";
@@ -69,14 +64,14 @@ int main(int argv, char *argc[])
     sprintf(xLabel, "Time");
     sprintf(yLabel, "Amplitude");
 
-    fprintf(gnuplot, "plot \'data.dat\' title \'Data\'\n");
     fprintf(gnuplot, "set terminal wxt size 500, 400\n");
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
     fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
+    fprintf(gnuplot, "plot \'data.tmp\' title \'Data\'\n");
 
     // Plot the data
-    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\" ");
+    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
     for (int i = 0; i < n; i++)
     {
         fprintf(gnuplot, "%d %lf\n", i, input[i]);
@@ -86,10 +81,28 @@ int main(int argv, char *argc[])
     {
         fprintf(gnuplot, "%d %lf\n", i, filteredInput[i]);
     }
+    fprintf(gnuplot, "e\n");
+    fprintf(gnuplot, "replot\n");
     
+    // for (int i = 0; i < n; i++)
+    // {
+    //     fprintf(gnuplotData, "%lf, %lf\n", input[i], filteredInput[i]);
+    // }
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     fprintf(gnuplotData, "%d %lf\n", i, input[i]);
+    // }
+    // fprintf(gnuplotData, "e\n");
+    // for (int i = 0; i < n; i++)
+    // {
+    //     fprintf(gnuplotData, "%d %lf\n", i, filteredInput[i]);
+    // }
+    // fprintf(gnuplotData, "e\n");
+
     // Close the GNU plot piping
     fclose(gnuplot);
-    fclose(gnuplotData);
+    // fclose(gnuplotData);
     
     // cout << "End of main function\n\n";
     return 0;
