@@ -8,7 +8,7 @@ using namespace std;
 int main(int argv, char *argc[])
 {
     // cout << "Start of main function\n";
-    unsigned long long n;
+    int n;
     cout << "Enter the number of points to generate in the signal: ";
     cin >> n;
 
