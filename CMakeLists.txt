@@ -11,7 +11,10 @@ endif()
 include_directories(inc)
 
 #includig SOURCES files at once (wildcard method)
-file(GLOB SOURCES "src/*.cpp" "src/*.h")
+file(GLOB SOURCES 
+    "${PROJECT_SOURCE_DIR}/include/*.h"
+    "${PROJECT_SOURCE_DIR}/src/*.cpp"
+)
 
 #set the executable file name and the SOURCES
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES} reference.cpp)
