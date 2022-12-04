@@ -75,13 +75,16 @@ int main(int argv, char *argc[])
     fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
     fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
 
-    // // Plot the data
-    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
-
-    fprintf(gnuplotData, "Raw Input, Filtered Output\n");
+    // Plot the data
+    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\" ");
     for (int i = 0; i < n; i++)
     {
-        fprintf(gnuplotData, "%lf, %lf\n", input[i], filteredInput[i]);
+        fprintf(gnuplot, "%d %lf\n", i, input[i]);
+    }
+    fprintf(gnuplot, "e\n");
+    for (int i = 0; i < n; i++)
+    {
+        fprintf(gnuplot, "%d %lf\n", i, filteredInput[i]);
     }
     
     // Close the GNU plot piping
