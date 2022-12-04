@@ -1,7 +1,8 @@
 #ifndef FIR_FILTER_H
 #define FIR_FILTER_H
 
-#include <stdint.h>
+// This is a bit overkill but saves writing out all the headers either in this file or another header to import here
+#include <bits/stdc++.h>
 
 #define FIR_FILTER_LENGTH 5
 
