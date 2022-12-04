@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/deshi/Code/FIR-filter/minor-project-build
+# Install script for directory: C:/Users/deshi/Code/dsp-filter-minor-project-cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/deshi/Code/FIR-filter/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

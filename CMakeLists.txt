@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(main)
+project(execute)
 
 find_program(GNUPLOT gnuplot)
 if(NOT GNUPLOT)
@@ -12,9 +12,9 @@ include_directories(inc)
 
 #includig SOURCES files at once (wildcard method)
 file(GLOB SOURCES 
-    "${PROJECT_SOURCE_DIR}/include/*.h"
-    "${PROJECT_SOURCE_DIR}/src/*.cpp"
+    "/inc/*.h"
+    "/src/*.cpp"
 )
 
 #set the executable file name and the SOURCES
-add_executable(${PROJECT_NAME} ${SOURCES} reference.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES} main.cpp)

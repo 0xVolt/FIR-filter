@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/deshi/Code/FIR-filter/build"
+			"value" : "c:/Users/deshi/Code/dsp-filter-minor-project-cpp/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -587,7 +587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/deshi/Code/FIR-filter/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/deshi/Code/FIR-filter/minor-project-build"
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -891,7 +891,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "main"
+			"value" : "execute"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1294,6 +1294,42 @@
 			"value" : "TRUE"
 		},
 		{
+			"name" : "execute_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build"
+		},
+		{
+			"name" : "execute_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "execute_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp"
+		},
+		{
 			"name" : "main_BINARY_DIR",
 			"properties" : 
 			[
@@ -1303,7 +1339,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/deshi/Code/FIR-filter/build"
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build"
 		},
 		{
 			"name" : "main_IS_TOP_LEVEL",
@@ -1327,7 +1363,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/deshi/Code/FIR-filter/minor-project-build"
+			"value" : "C:/Users/deshi/Code/dsp-filter-minor-project-cpp"
 		}
 	],
 	"kind" : "cache",

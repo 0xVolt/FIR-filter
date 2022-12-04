@@ -1,4 +1,4 @@
-#include "FIR.h"
+#include "../inc/FIR.h"
 
 // define the variable in the stack memory, including declaration. The value of this
 // FIR_FILTER_IMPULSE_RESPONSE array is based on a design (the value represent the behaviour of the filter)

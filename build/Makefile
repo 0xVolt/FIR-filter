@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\deshi\Code\FIR-filter\minor-project-build
+CMAKE_SOURCE_DIR = C:\Users\deshi\Code\dsp-filter-minor-project-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\deshi\Code\FIR-filter\build
+CMAKE_BINARY_DIR = C:\Users\deshi\Code\dsp-filter-minor-project-cpp\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\deshi\Code\FIR-filter\build\CMakeFiles C:\Users\deshi\Code\FIR-filter\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\deshi\Code\dsp-filter-minor-project-cpp\build\CMakeFiles C:\Users\deshi\Code\dsp-filter-minor-project-cpp\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\deshi\Code\FIR-filter\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\deshi\Code\dsp-filter-minor-project-cpp\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,65 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named execute
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
-.PHONY : main
+execute: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 execute
+.PHONY : execute
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+execute/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\execute.dir\build.make CMakeFiles/execute.dir/build
+.PHONY : execute/fast
 
-src/FIR.obj: src/FIR.cpp.obj
-.PHONY : src/FIR.obj
-
-# target to build an object file
-src/FIR.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/FIR.cpp.obj
-.PHONY : src/FIR.cpp.obj
-
-src/FIR.i: src/FIR.cpp.i
-.PHONY : src/FIR.i
-
-# target to preprocess a source file
-src/FIR.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/FIR.cpp.i
-.PHONY : src/FIR.cpp.i
-
-src/FIR.s: src/FIR.cpp.s
-.PHONY : src/FIR.s
-
-# target to generate assembly for a file
-src/FIR.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/FIR.cpp.s
-.PHONY : src/FIR.cpp.s
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\execute.dir\build.make CMakeFiles/execute.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\execute.dir\build.make CMakeFiles/execute.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\execute.dir\build.make CMakeFiles/execute.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -184,13 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main
-	@echo ... src/FIR.obj
-	@echo ... src/FIR.i
-	@echo ... src/FIR.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... execute
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
