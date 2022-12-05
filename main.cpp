@@ -75,6 +75,7 @@ int main(int argv, char *argc[])
     fclose(gnuplot);
 
 
-    // cout << "End of main function\n\n";
+    cout << "Generated commands.p file!\n\n";
+    
     return 0;
 }
