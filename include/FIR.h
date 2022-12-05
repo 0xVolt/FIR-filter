@@ -4,7 +4,8 @@
 // This is a bit overkill but saves writing out all the headers either in this file or another header to import here
 #include <bits/stdc++.h>
 
-#define FIR_FILTER_LENGTH 5
+// #define FIR_FILTER_LENGTH 5
+#define FIR_FILTER_LENGTH 10
 
 // Defining the struct to represent the circular buffer
 typedef struct

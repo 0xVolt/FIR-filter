@@ -2,11 +2,12 @@
 
 // define the variable in the stack memory, including declaration. The value of this
 // FIR_FILTER_IMPULSE_RESPONSE array is based on a design (the value represent the behaviour of the filter)
-static float FIR_FILTER_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.4, 0.3, 0.2, 0.1, 0.05};
+// static float FIR_FILTER_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.4, 0.3, 0.2, 0.1, 0.05};
+static float FIR_FILTER_IMPULSE_RESPONSE[FIR_FILTER_LENGTH] = {0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1};
 
 // function to initialise the circular buffer value
 void FIRFilter_init(FIRFilter *fir)
-{ 
+{
     // use pointer to FIRFilter variable so that we do not need to copy the memory value (more efficient)
     // clear the buffer of the filter
     for (int i = 0; i < FIR_FILTER_LENGTH; i++)
