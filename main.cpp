@@ -5,7 +5,7 @@ using namespace std;
 int main(int argv, char *argc[])
 {
     // cout << "Start of main function\n";
-    int n = 10;
+    int n = 1000;
 
     // Generating noisy data to be filtered
     float input[n];
