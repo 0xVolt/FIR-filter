@@ -74,7 +74,6 @@ int main(int argv, char *argc[])
     // Close the GNU plot piping
     fclose(gnuplot);
 
-    
 
     // cout << "End of main function\n\n";
     return 0;
