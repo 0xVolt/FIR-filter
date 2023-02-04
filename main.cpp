@@ -36,9 +36,6 @@ int main(int argv, char *argc[])
         filteredInput[i] = fir.out;
     }
 
-    // Display a new line for better formatting
-    cout << endl;
-
     // Plotting with GNU Plot
     FILE *gnuplot = fopen("commands.p", "w");
 
@@ -55,7 +52,6 @@ int main(int argv, char *argc[])
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
     fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
-    fprintf(gnuplot, "plot \'data.tmp\' title \'Data\'\n");
 
     // Plot the data
     fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
@@ -74,8 +70,7 @@ int main(int argv, char *argc[])
     // Close the GNU plot piping
     fclose(gnuplot);
 
-
-    cout << "Generated commands.p file!\n\n";
+    cout << "Generated commands.p file!\n";
     
     return 0;
 }
