@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 
 # Set project name
-project(project VERSION 0.1.0)
+project(main VERSION 0.1.0)
 
 # Enable testing should we need it
 include(CTest)
