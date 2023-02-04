@@ -1,4 +1,4 @@
-# Install script for directory: /home/volt/code/learn-cmake-linux
+# Install script for directory: /home/volt/code/filter-coffee
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/volt/code/learn-cmake-linux/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/volt/code/filter-coffee/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/volt/code/learn-cmake-linux/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
-  "/home/volt/code/learn-cmake-linux/source/FIR.cpp" "CMakeFiles/main.dir/source/FIR.cpp.o" "gcc" "CMakeFiles/main.dir/source/FIR.cpp.o.d"
+  "/home/volt/code/filter-coffee/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
+  "/home/volt/code/filter-coffee/source/FIR.cpp" "CMakeFiles/main.dir/source/FIR.cpp.o" "gcc" "CMakeFiles/main.dir/source/FIR.cpp.o.d"
   )
 
 # Targets to which this target links.

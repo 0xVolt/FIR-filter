@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/volt/code/learn-cmake-linux
-BuildDirectory: /home/volt/code/learn-cmake-linux/build
+SourceDirectory: /home/volt/code/filter-coffee
+BuildDirectory: /home/volt/code/filter-coffee/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/volt/code/learn-cmake-linux"
+ConfigureCommand: "/usr/bin/cmake" "/home/volt/code/filter-coffee"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -44,7 +44,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -57,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++

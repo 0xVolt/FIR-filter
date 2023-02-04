@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/volt/code/learn-cmake-linux/include -I/home/volt/code/learn-cmake-linux/source
+CXX_INCLUDES = -I/home/volt/code/filter-coffee/include -I/home/volt/code/filter-coffee/source
 
 CXX_FLAGS = 
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/volt/code/learn-cmake-linux
+CMAKE_SOURCE_DIR = /home/volt/code/filter-coffee
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/volt/code/learn-cmake-linux/build
+CMAKE_BINARY_DIR = /home/volt/code/filter-coffee/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /home/volt/code/learn-cmake-linux/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/volt/code/learn-cmake-linux /home/volt/code/learn-cmake-linux /home/volt/code/learn-cmake-linux/build /home/volt/code/learn-cmake-linux/build /home/volt/code/learn-cmake-linux/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/volt/code/filter-coffee/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/volt/code/filter-coffee /home/volt/code/filter-coffee /home/volt/code/filter-coffee/build /home/volt/code/filter-coffee/build /home/volt/code/filter-coffee/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 
