@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/Users/deshi/Code/dsp-filter-minor-project-cpp
-# Build directory: C:/Users/deshi/Code/dsp-filter-minor-project-cpp/build
+# Source directory: /home/volt/code/learn-cmake-linux
+# Build directory: /home/volt/code/learn-cmake-linux/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

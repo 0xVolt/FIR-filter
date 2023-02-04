@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/main.cpp" "CMakeFiles/project.dir/main.cpp.obj" "gcc" "CMakeFiles/project.dir/main.cpp.obj.d"
-  "C:/Users/deshi/Code/dsp-filter-minor-project-cpp/source/FIR.cpp" "CMakeFiles/project.dir/source/FIR.cpp.obj" "gcc" "CMakeFiles/project.dir/source/FIR.cpp.obj.d"
+  "/home/volt/code/learn-cmake-linux/main.cpp" "CMakeFiles/project.dir/main.cpp.o" "gcc" "CMakeFiles/project.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.
