@@ -14,8 +14,10 @@ def wavToFloat(wave_file):
     return a
 
 
-def writeSignal(signal):
+def writeSignal(signal, signalLength):
     outputFile = open('data/signal.txt', 'w')
+    
+    outputFile.write(f'{signalLength}\n')
     
     for index, dataPoint in enumerate(signal):
         outputFile.write(f'{index} {dataPoint}\n')
@@ -26,11 +28,13 @@ def writeSignal(signal):
 def main():
     signal = wavToFloat(r'data/wrong-place-sound.wav')
     
-    print("# Frames Read:", str(len(signal)))
+    signalLength = len(signal)
+    
+    print("# Frames Read:", len(signal))
     print(f"Range of Values: [{str(min(signal))}, {str(max(signal))}]")
     print(type(signal))
     
-    writeSignal(signal)
+    writeSignal(signal, signalLength)
 
     print("Generated signal written to output file!")
 

@@ -11,23 +11,6 @@ int main(int argv, char *argc[])
     float input[n];
     float filteredInput[n];
 
-    // Generate the input values
-    // const float pi = 3.14159265358979;
-    // const float f = 2.5; // Hz
-    // for (int i = 0; i < n; i++)
-    // {
-    //     float min = 0.0f;
-    //     float max = 0.3f;
-    //     float noise = min + ((float)rand() / (float)RAND_MAX) * (max - min);
-    //     input[i] = (float)sin(2 * pi * f * i / n) + noise; // one cycle t=i/n=0 to 1
-    // }
-
-    
-
-    for (int i = 0; i < n; ++i) {
-        cout << input[i] << " ";
-    }
-
     // FIR filter with circular buffer
     // Declaring the filter struct variable
     // FIRFilter fir;
