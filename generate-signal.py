@@ -19,8 +19,8 @@ def writeSignal(signal, signalLength):
     
     # outputFile.write(f'{signalLength}\n')
     
-    for index, dataPoint in enumerate(signal):
-        outputFile.write(f'{index} {dataPoint}\n')
+    for dataPoint in signal:
+        outputFile.write(f'{dataPoint}\n')
         
     outputFile.close()
 
