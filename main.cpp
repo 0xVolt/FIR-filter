@@ -54,9 +54,11 @@ void generateCommandsScript(vector<float> signal) {
 
     // return true;
 
-    int length = signal.size();
+    // int length = signal.size();
+    int start = 30000;
+    int end = start + 50000;
 
-    vector<float> filteredOutput(length);
+    vector<float> filteredOutput(end - start);
 
     // FIR filter with circular buffer
     // Declaring the filter struct variable
@@ -66,7 +68,7 @@ void generateCommandsScript(vector<float> signal) {
     FIRFilter_init(&fir);
 
     // Calculating the filtered values
-    for (int i = 0; i < length; i++) {
+    for (int i = start; i < end; i++) {
         FIRFilter_calc(&fir, signal[i]);
         filteredOutput[i] = fir.out;
     }
@@ -90,13 +92,13 @@ void generateCommandsScript(vector<float> signal) {
 
     // Plot the data
     fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
-    for (int i = 0; i < length; i++) {
+    for (int i = start; i < end; i++) {
         fprintf(gnuplot, "%d %f\n", i, signal[i]);
     }
 
     fprintf(gnuplot, "e\n");
 
-    for (int i = 0; i < length; i++) {
+    for (int i = start; i < end; i++) {
         fprintf(gnuplot, "%d %f\n", i, filteredOutput[i]);
     }
 
