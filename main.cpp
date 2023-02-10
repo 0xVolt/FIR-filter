@@ -3,29 +3,32 @@
 #include <string>
 using namespace std;
 
+int countLines();
+
 int main(int argv, char *argc[]) {
-    fstream source;
-    source.open("data/signal.txt", ios_base::in);
+    // fstream source;
+    // source.open("data/signal.txt", ios_base::in);
 
-    for(string line; getline(source, line);) {
-        istringstream inputStringStream(line);      //make a stream for the line itself
+    // for(string line; getline(source, line);) {
+    //     float index, value;
+    //     istringstream readInput(line);
 
-        string signalLength;
-        in >> signalLength;                  //and read the first whitespace-separated token
+    //     readInput >> index >> value;
 
-        if(type == "triangle")       //and check its value
-        {
-            float x, y, z;
-            in >> x >> y >> z;       //now read the whitespace-separated floats
-        }
-    }
+    //     cout << index << ": " << value << endl;                //and read the first whitespace-separated token
+    // }
+
+    int length = countLines();
+    cout << length;
+
+    return 0;
 
     // cout << "Start of main function\n";
-    int n = 1000;
+    // int n = 1000;
 
     // Generating noisy data to be filtered
-    float input[n];
-    float filteredInput[n];
+    // float input[n];
+    // float filteredInput[n];
 
     /*
     // FIR filter with circular buffer
@@ -79,6 +82,25 @@ int main(int argv, char *argc[]) {
     cout << "Generated commands.p file!\n";
 
     */
+}
 
-    return 0;
+int countLines() {
+    string line;   // To read each line from code
+    int count = 0;    // Variable to keep count of each line
+    fstream file;
+    file.open("/home/volt/code/filter-coffee/data/signal.txt", ios::in);  
+
+    if(file.is_open()) {
+        while(file.peek() != EOF) {
+            getline(file, line);
+            count++;
+        }
+        file.close();
+        
+        return count;
+    } else {
+        cout << "Couldn't open the file\n";
+        
+        return -1;
+    }
 }
