@@ -6,17 +6,17 @@ using namespace std;
 int countLines();
 
 int main(int argv, char *argc[]) {
-    // fstream source;
-    // source.open("data/signal.txt", ios_base::in);
+    fstream source;
+    source.open("data/signal.txt", ios_base::in);
 
-    // for(string line; getline(source, line);) {
-    //     float index, value;
-    //     istringstream readInput(line);
+    for(string line; getline(source, line);) {
+        float index, value;
+        istringstream readInput(line);
 
-    //     readInput >> index >> value;
+        readInput >> index >> value;
 
-    //     cout << index << ": " << value << endl;                //and read the first whitespace-separated token
-    // }
+        cout << index << ": " << value << endl;
+    }
 
     int length = countLines();
     cout << length;
