@@ -7,7 +7,7 @@ using namespace std;
 vector<float> loadSignal();
 void display(vector<float>);
 int getSignalSize(vector<float>);
-bool generateCommandsScript(vector<float>);
+void generateCommandsScript(vector<float>);
 
 int main(int argv, char *argc[]) {
     vector<float> signal = loadSignal();
@@ -74,41 +74,35 @@ void generateCommandsScript(vector<float> signal) {
     // Plotting with GNU Plot
     FILE *gnuplot = fopen("commands.p", "w");
 
-    if (filesystem::exists("commands.p")) {
-        char title[200] = "";
-        char xLabel[200] = "";
-        char yLabel[200] = "";
+    char title[200] = "";
+    char xLabel[200] = "";
+    char yLabel[200] = "";
 
-        // Set the plot title, xlabel and ylabel
-        sprintf(title, "Original and filtered samples");
-        sprintf(xLabel, "Time");
-        sprintf(yLabel, "Amplitude");
+    // Set the plot title, xlabel and ylabel
+    sprintf(title, "Original and filtered samples");
+    sprintf(xLabel, "Time");
+    sprintf(yLabel, "Amplitude");
 
-        fprintf(gnuplot, "set terminal wxt size 500, 400\n");
-        fprintf(gnuplot, "set title '%s'\n", title);
-        fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
-        fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
+    fprintf(gnuplot, "set terminal wxt size 500, 400\n");
+    fprintf(gnuplot, "set title '%s'\n", title);
+    fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
+    fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
 
-        // Plot the data
-        fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
-        for (int i = 0; i < length; i++) {
-            fprintf(gnuplot, "%d %f\n", i, signal[i]);
-        }
-
-        fprintf(gnuplot, "e\n");
-
-        for (int i = 0; i < length; i++) {
-            fprintf(gnuplot, "%d %f\n", i, filteredOutput[i]);
-        }
-
-        fprintf(gnuplot, "e\n");
-        fprintf(gnuplot, "replot\n");
-
-        // Close the GNU plot piping
-        fclose(gnuplot);
-
-        return true;
-    } else {
-        return false;
+    // Plot the data
+    fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
+    for (int i = 0; i < length; i++) {
+        fprintf(gnuplot, "%d %f\n", i, signal[i]);
     }
+
+    fprintf(gnuplot, "e\n");
+
+    for (int i = 0; i < length; i++) {
+        fprintf(gnuplot, "%d %f\n", i, filteredOutput[i]);
+    }
+
+    fprintf(gnuplot, "e\n");
+    fprintf(gnuplot, "replot\n");
+
+    // Close the GNU plot piping
+    fclose(gnuplot);
 }
