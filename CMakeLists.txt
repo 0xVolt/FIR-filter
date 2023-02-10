@@ -14,6 +14,7 @@ enable_testing()
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/source
+    ${PROJECT_SOURCE_DIR}/data
 )
 
 # Make sure CMake can find all those files that are .h in /include/ and .cpp in /src/
