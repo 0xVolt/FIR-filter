@@ -17,7 +17,7 @@ def wavToFloat(wave_file):
 def writeSignal(signal, signalLength):
     outputFile = open('data/signal.txt', 'w')
     
-    outputFile.write(f'{signalLength}\n')
+    # outputFile.write(f'{signalLength}\n')
     
     for index, dataPoint in enumerate(signal):
         outputFile.write(f'{index} {dataPoint}\n')
