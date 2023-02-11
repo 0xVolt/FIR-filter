@@ -1,7 +1,8 @@
-set terminal wxt size 500, 400
+set terminal wxt size 1500, 500
 set title 'Original and filtered samples'
 set xlabel 'Time'
 set ylabel 'Amplitude'
+set offsets 0, 0, 2, 2
 plot '-' w lines lc rgb 'blue' title "sampled data", '-' w lines lc rgb 'red' title "Filtered data"
 30000 1.000000
 30001 1.000000
