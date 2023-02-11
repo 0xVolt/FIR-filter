@@ -6,7 +6,6 @@ using namespace std;
 
 vector<float> loadSignal();
 void display(vector<float>);
-int getSignalSize(vector<float>);
 void generateCommandsScript(vector<float>);
 
 int main(int argv, char *argc[]) {
