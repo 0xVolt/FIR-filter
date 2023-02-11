@@ -39,21 +39,12 @@ vector<float> loadSignal() {
         signal.push_back(value);
     }
 
+    file.close();
+
     return signal;
 }
 
 void generateCommandsScript(vector<float> signal) {
-    // fstream file;
-    // file.open("commands.p", ios_base::out);
-
-    // for (int i = 0; i < signal.size(); i++) {
-    //     file << signal[i] << endl;
-    // }
-
-    // file.close();
-
-    // return true;
-
     // int length = signal.size();
     int start = 30000;
     int end = start + 50000;
@@ -85,10 +76,12 @@ void generateCommandsScript(vector<float> signal) {
     sprintf(xLabel, "Time");
     sprintf(yLabel, "Amplitude");
 
-    fprintf(gnuplot, "set terminal wxt size 500, 400\n");
+    fprintf(gnuplot, "set terminal wxt size 1500, 500\n");
     fprintf(gnuplot, "set title '%s'\n", title);
     fprintf(gnuplot, "set xlabel '%s'\n", xLabel);
     fprintf(gnuplot, "set ylabel '%s'\n", yLabel);
+
+    fprintf(gnuplot, "set offsets 0, 0, 2, 2\n");
 
     // Plot the data
     fprintf(gnuplot, "plot '-' w lines lc rgb 'blue' title \"sampled data\", '-' w lines lc rgb 'red' title \"Filtered data\"\n");
