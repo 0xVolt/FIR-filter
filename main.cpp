@@ -46,8 +46,8 @@ vector<float> loadSignal() {
 
 void generateCommandsScript(vector<float> signal) {
     // int length = signal.size();
-    int start = 30000;
-    int end = start + 50000;
+    int start = 50000;
+    int end = start + 75000;
 
     vector<float> filteredOutput(end - start);
 
