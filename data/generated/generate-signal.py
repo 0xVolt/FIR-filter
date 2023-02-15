@@ -1,4 +1,5 @@
 import wave
+import numpy as np
 import struct
 
 def wavToFloat(wave_file):
@@ -8,8 +9,8 @@ def wavToFloat(wave_file):
     # convert binary chunks to short 
     a = struct.unpack("%ih" % (w.getnframes() * w.getnchannels()), astr)
     
-    # a = [float(val) / pow(2, 15) for val in a]
-    a = [float(val) for val in a]
+    a = [float(val) / np.log(2) for val in a]
+    # a = [float(val) for val in a]
     
     return a
 

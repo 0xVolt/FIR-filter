@@ -45,8 +45,8 @@ vector<float> loadSignal() {
 
 void generateCommandsScript(vector<float> signal) {
     // int length = signal.size();
-    int start = 50000;
-    int end = start + 75000;
+    int start = 0;
+    int end = 150000;
 
     vector<float> filteredOutput(end - start);
 
@@ -99,4 +99,5 @@ void generateCommandsScript(vector<float> signal) {
 
     // Close the GNU plot piping
     fclose(gnuplot);
+    // free(gnuplot);
 }
