@@ -16,13 +16,6 @@ int main(int argv, char *argc[]) {
     return 0;
 }
 
-void display(vector<float> signal) {
-    cout << "Displaying signal in float values:\n";
-    for (auto element: signal) {
-        cout << element << endl;
-    }
-}
-
 vector<float> loadSignal() {
     vector<float> signal;
 
@@ -41,6 +34,13 @@ vector<float> loadSignal() {
     file.close();
 
     return signal;
+}
+
+void display(vector<float> signal) {
+    cout << "Displaying signal in float values:\n";
+    for (auto element: signal) {
+        cout << element << endl;
+    }
 }
 
 void generateCommandsScript(vector<float> signal) {
