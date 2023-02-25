@@ -1,7 +1,4 @@
 #include "include/FIR.h"
-#include <sstream>
-#include <vector>
-#include <string>
 using namespace std;
 
 vector<float> loadSignal();
