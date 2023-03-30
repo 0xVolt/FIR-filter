@@ -15,7 +15,7 @@ def wavToFloat(wave_file):
     return a
 
 
-def writeSignal(signal, signalLength):
+def writeSignal(signal):
     outputFile = open('./data/generated/signal.txt', 'w')
 
     for dataPoint in signal:
@@ -25,7 +25,7 @@ def writeSignal(signal, signalLength):
 
 
 def main():
-    signal = wavToFloat(r'/home/volt/code/filter-coffee/data/raw/wrong-place-sound.wav')
+    signal = wavToFloat(r'/home/volt/code/filter-coffee/data/raw/raw-input.wav')
 
     signalLength = len(signal)
 
